@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Alt Text](https://s31.aconvert.com/convert/p3r68-cdx67/vhs5n-blach.gif)
+<img src="https://media.giphy.com/media/rB6MWfwIIIXoKTIfSt/giphy.gif", width=250 />
