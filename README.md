@@ -25,4 +25,4 @@ Here's a walkthrough of implemented user stories:
 
 ![stay logged in](https://media.giphy.com/media/Z3kplrT3UaglnBvcYJ/giphy.gif)
 
-![main](https://media.giphy.com/media/INrxhTymPQO89xSrZv/giphy.gif)
+![main]()
