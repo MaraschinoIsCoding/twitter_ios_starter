@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![ Alt text](https://media.giphy.com/media/rB6MWfwIIIXoKTIfSt/giphy.gif)
+![me](https://media.giphy.com/media/Z3kplrT3UaglnBvcYJ/giphy.gif)
