@@ -23,4 +23,6 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Alt Text](https://s31.aconvert.com/convert/p3r68-cdx67/vhs5n-blach.gif)
+![stay logged in](https://media.giphy.com/media/Z3kplrT3UaglnBvcYJ/giphy.gif)
+
+![main]()
