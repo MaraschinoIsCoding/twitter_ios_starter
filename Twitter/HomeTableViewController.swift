@@ -19,14 +19,21 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         loadTweets()
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
+
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
+    }
+    
     
     @objc func loadTweets(){
         numOfTweets = 5
         let myUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count":numOfTweets]
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: { (tweets:[NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: { (tweets:[NSDictionary]) in
             // Empty the arr
             self.tweetArray.removeAll()
             // Add new tweet
@@ -46,7 +53,7 @@ class HomeTableViewController: UITableViewController {
         numOfTweets += 5
         let myParams = ["count":numOfTweets]
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: { (tweets:[NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: { (tweets:[NSDictionary]) in
             // Empty the arr
             self.tweetArray.removeAll()
             // Add new tweet
@@ -93,8 +100,13 @@ class HomeTableViewController: UITableViewController {
         let user = singleTweet["user"] as! NSDictionary
         let userName = user["name"] as! String
         let tweetContent = singleTweet["text"] as! String
+        let favourited = singleTweet["favorited"] as! Bool
+        cell.tweetId = singleTweet["id"] as! Int
+       
         cell.userNameLabel.text = userName
         cell.tweetContentLabel.text = tweetContent
+        cell.setFavourited(favourited)
+
         
         let imageUrl = URL(string: (user["profile_image_url"] as! String))
         let data = try? Data(contentsOf: imageUrl!)
